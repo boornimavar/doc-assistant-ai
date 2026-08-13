@@ -51,20 +51,22 @@ ai/
 You'll need Python 3.10+, Node.js, and MongoDB running locally (or a connection string swapped into `mongo_utils.py` / `vector_store.py` if you're using Atlas).
 
 **Backend:**
+
 ```bash
 cd ai
 python -m venv venv
-venv\Scripts\activate          # Mac/Linux: source venv/bin/activate
+venv\Scripts\activate
 pip install -r requirements.txt
-python seed_documents.py       # loads sample docs into MongoDB
-python app.py                  # runs on http://127.0.0.1:5000
+python seed_documents.py
+python app.py
 ```
 
 **Frontend** (separate terminal):
+
 ```bash
 cd ai/doc-assistant-ui
 npm install
-npm start                      # runs on http://localhost:3000
+npm start
 ```
 
 Open `http://localhost:3000` and the docs site should load with the chat widget in the corner.
