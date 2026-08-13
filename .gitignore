@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pkl
+my_dataset/
+document_index.index
+
+# Node
+node_modules/
+build/
+
+# Env / secrets
+.env
+
+# OS
+.DS_Store
+Thumbs.db

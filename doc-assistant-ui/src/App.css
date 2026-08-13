@@ -1,0 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    BlinkMacSystemFont,
+    sans-serif;
+  background: #f5f6fa;
+  color: #1b2430;
+}
+
+/* ---------- Docs website ---------- */
+
+.docs-page {
+  min-height: 100vh;
+  background: #f5f6fa;
+}
+
+.docs-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 48px;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7ef;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.docs-nav-brand {
+  font-family: "Space Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: #1b2430;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.docs-nav-mark {
+  color: #4f46e5;
+}
+
+.docs-nav-links {
+  display: flex;
+  gap: 28px;
+  font-size: 13.5px;
+  font-weight: 500;
+  color: #5b6478;
+}
+
+.docs-hero {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 72px 24px 48px;
+  text-align: center;
+}
+
+.docs-hero-eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f46e5;
+  margin: 0 0 14px;
+}
+
+.docs-hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 14px;
+  color: #131a26;
+}
+
+.docs-hero-sub {
+  font-size: 15.5px;
+  color: #5b6478;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.docs-grid {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 80px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.docs-card {
+  background: #ffffff;
+  border: 1px solid #e5e7ef;
+  border-left: 3px solid #4f46e5;
+  border-radius: 8px;
+  padding: 20px 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.docs-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(20, 24, 40, 0.06);
+}
+
+.docs-card-category {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.docs-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16.5px;
+  font-weight: 600;
+  margin: 2px 0 2px;
+  color: #131a26;
+}
+
+.docs-card p {
+  font-size: 13.5px;
+  color: #5b6478;
+  line-height: 1.5;
+  margin: 0 0 8px;
+}
+
+.docs-card-author {
+  font-size: 11.5px;
+  color: #9aa1b2;
+  margin-top: auto;
+}
+
+.docs-card-clickable {
+  cursor: pointer;
+}
+
+.docs-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(19, 26, 38, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 24px;
+}
+
+.docs-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 520px;
+  width: 100%;
+  padding: 32px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.docs-modal h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 22px;
+  margin: 6px 0 4px;
+  color: #131a26;
+}
+
+.docs-modal-body {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: #3a4256;
+  margin: 6px 0 10px;
+}
+
+.docs-modal-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.docs-modal-ask {
+  background: #4f46e5;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.docs-modal-ask:hover {
+  background: #4338ca;
+}
+
+.docs-modal-close {
+  background: none;
+  border: 1px solid #e5e7ef;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13.5px;
+  cursor: pointer;
+  color: #5b6478;
+}
+
+.docs-footer {
+  text-align: center;
+  padding: 28px 24px 40px;
+  font-size: 12.5px;
+  color: #9aa1b2;
+}
+
+/* ---------- Chat widget ---------- */
+
+.widget-root {
+  font-family: "Inter", sans-serif;
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.launcher-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: none;
+  background: #4f46e5;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(79, 70, 229, 0.4);
+  margin-top: 12px;
+}
+
+.launcher-btn:hover {
+  background: #4338ca;
+}
+
+.chatbot-container {
+  width: 360px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+}
+
+.chatbot-header {
+  background: #4f46e5;
+  color: white;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.chatbox {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #f7f7f8;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  line-height: 1.4;
+  word-wrap: break-word;
+  font-size: 13.5px;
+}
+
+.message.user {
+  align-self: flex-end;
+  background: #4f46e5;
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+
+.message.bot {
+  align-self: flex-start;
+  background: white;
+  color: #222;
+  border: 1px solid #e2e2e2;
+  border-bottom-left-radius: 4px;
+}
+
+.message.bot .answer h3 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+  color: #111;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.message.bot .answer p {
+  margin: 4px 0;
+  font-size: 13px;
+}
+
+.message.bot .answer .answer-source {
+  display: block;
+  margin-top: 6px;
+  font-size: 11px;
+  color: #9aa1b2;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.input-row {
+  display: flex;
+  border-top: 1px solid #e5e5e5;
+  padding: 10px;
+  gap: 8px;
+}
+
+.input-row input {
+  flex: 1;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 13px;
+  outline: none;
+}
+
+.input-row button {
+  padding: 8px 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.input-row button:hover {
+  background: #4338ca;
+}
