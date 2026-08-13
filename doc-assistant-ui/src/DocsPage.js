@@ -90,7 +90,7 @@ function DocsPage({ onAskAbout }) {
     <div className="docs-page">
       <header className="docs-nav">
         <div className="docs-nav-brand">
-          <span className="docs-nav-mark">◆</span> Nimbus Docs
+          <span className="docs-nav-mark">◆</span> Docs Assistant
         </div>
         <nav className="docs-nav-links">
           <span>Guides</span>
